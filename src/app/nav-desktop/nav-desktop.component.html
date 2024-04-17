@@ -1,0 +1,23 @@
+<nav>
+  <ul class="items">
+    @for (item of menu; track item.name) {
+    <li>
+      @if (item.children) {
+      <button (click)="item.open = !item.open" [attr.aria-expanded]="item.open">
+        {{ item.name }}
+        <app-chevron-down aria-hidden="true" />
+      </button>
+      <ul class="children">
+        @for (child of item.children; track child.name) {
+        <li>
+          <a href="{{ child.link }}">{{ child.name }}</a>
+        </li>
+        }
+      </ul>
+      } @else {
+      <a class="link" href="{{ item.link }}">{{ item.name }}</a>
+      }
+    </li>
+    }
+  </ul>
+</nav>
