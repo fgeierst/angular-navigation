@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HamburgerMenuComponent } from '../icons/hamburger-menu/hamburger-menu.component';
 import { CrossComponent } from '../icons/cross/cross.component';
 
@@ -10,30 +10,6 @@ import { CrossComponent } from '../icons/cross/cross.component';
   styleUrl: './nav-mobile.component.css',
 })
 export class NavMobileComponent {
+  @Input() menu: any[] = [];
   open = false;
-  menu = [
-    {
-      name: 'Products',
-      link: '/products',
-      open: false,
-      children: [
-        {
-          name: 'New Arrivals',
-          link: '/products/new-arrivals',
-        },
-        {
-          name: 'On Sale',
-          link: '/products/on-sale',
-        },
-      ],
-    },
-    {
-      name: 'About',
-      link: '/about',
-    },
-    {
-      name: 'Contact',
-      link: '/search',
-    },
-  ];
 }

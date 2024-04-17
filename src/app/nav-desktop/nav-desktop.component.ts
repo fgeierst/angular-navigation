@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ChevronDownComponent } from '../icons/chevron-down/chevron-down.component';
 
 @Component({
@@ -9,29 +9,5 @@ import { ChevronDownComponent } from '../icons/chevron-down/chevron-down.compone
   styleUrl: './nav-desktop.component.css',
 })
 export class NavDesktopComponent {
-  menu = [
-    {
-      name: 'Products',
-      link: '/products',
-      open: false,
-      children: [
-        {
-          name: 'New Arrivals',
-          link: '/products/new-arrivals',
-        },
-        {
-          name: 'On Sale',
-          link: '/products/on-sale',
-        },
-      ],
-    },
-    {
-      name: 'About',
-      link: '/about',
-    },
-    {
-      name: 'Contact',
-      link: '/search',
-    },
-  ];
+  @Input() menu: any[] = [];
 }
