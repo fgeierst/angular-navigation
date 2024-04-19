@@ -24,3 +24,10 @@
   list-style: none;
   padding-inline-start: 1rem;
 }
+
+.icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  align-items: center;
+}

@@ -2,9 +2,9 @@
   <div (click)="open = !open" [attr.aria-expanded]="open">
     <span class="sr-only">Main Menu</span>
     @if (open) {
-    <app-cross aria-hidden="true" />
+    <app-cross aria-hidden="true" class="icon" />
     } @else {
-    <app-hamburger-menu aria-hidden="true" />
+    <app-hamburger-menu aria-hidden="true" class="icon" />
     }
   </div>
   <div class="panel">

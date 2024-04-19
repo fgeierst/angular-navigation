@@ -1,7 +1,7 @@
 <nav>
   <div class="items">
     @for (item of menu; track item.name) {
-    <div>
+    <div class="items__item">
       @if (item.children) {
       <div
         class="submenu-toggle"
@@ -9,11 +9,11 @@
         [attr.aria-expanded]="item.open"
       >
         {{ item.name }}
-        <app-chevron-down aria-hidden="true" />
+        <app-chevron-down aria-hidden="true" class="icon" />
       </div>
       <div class="children">
         @for (child of item.children; track child.name) {
-        <div>
+        <div class="children__item">
           <div (click)="navigate(child.link)">
             {{ child.name }}
           </div>
