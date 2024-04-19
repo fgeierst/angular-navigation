@@ -1,28 +1,28 @@
-<nav class="" aria-label="Main">
-  <button (click)="open = !open" [attr.aria-expanded]="open">
+<div aria-label="Main">
+  <div (click)="open = !open" [attr.aria-expanded]="open">
     <span class="sr-only">Main Menu</span>
     @if (open) {
     <app-cross aria-hidden="true" />
     } @else {
     <app-hamburger-menu aria-hidden="true" />
     }
-  </button>
-  <div class="panel">
-    <ul class="items">
-      @for (item of menu; track item.name) {
-      <li>
-        <a class="link" href="{{ item.link }}">{{ item.name }}</a>
-        @if (item.children) {
-        <ul class="children">
-          @for (child of item.children; track child.name) {
-          <li>
-            <a href="{{ child.link }}">{{ child.name }}</a>
-          </li>
-          }
-        </ul>
-        }
-      </li>
-      }
-    </ul>
   </div>
-</nav>
+  <div class="panel">
+    <div class="items">
+      @for (item of menu; track item.name) {
+      <div>
+        <div class="link" (click)="navigate(item.link)">{{ item.name }}</div>
+        @if (item.children) {
+        <div class="children">
+          @for (child of item.children; track child.name) {
+          <div>
+            <div (click)="navigate(child.link)">{{ child.name }}</div>
+          </div>
+          }
+        </div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>

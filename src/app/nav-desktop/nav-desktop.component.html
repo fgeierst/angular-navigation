@@ -1,23 +1,29 @@
 <nav>
-  <ul class="items">
+  <div class="items">
     @for (item of menu; track item.name) {
-    <li>
+    <div>
       @if (item.children) {
-      <button (click)="item.open = !item.open" [attr.aria-expanded]="item.open">
+      <div
+        class="submenu-toggle"
+        (click)="item.open = !item.open"
+        [attr.aria-expanded]="item.open"
+      >
         {{ item.name }}
         <app-chevron-down aria-hidden="true" />
-      </button>
-      <ul class="children">
+      </div>
+      <div class="children">
         @for (child of item.children; track child.name) {
-        <li>
-          <a href="{{ child.link }}">{{ child.name }}</a>
-        </li>
+        <div>
+          <div (click)="navigate(child.link)">
+            {{ child.name }}
+          </div>
+        </div>
         }
-      </ul>
+      </div>
       } @else {
-      <a class="link" href="{{ item.link }}">{{ item.name }}</a>
+      <div class="link" (click)="navigate(item.link)">{{ item.name }}</div>
       }
-    </li>
+    </div>
     }
-  </ul>
+  </div>
 </nav>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChevronDownComponent } from '../icons/chevron-down/chevron-down.component';
 
 @Component({
@@ -9,5 +10,11 @@ import { ChevronDownComponent } from '../icons/chevron-down/chevron-down.compone
   styleUrl: './nav-desktop.component.css',
 })
 export class NavDesktopComponent {
+  constructor(private router: Router) {}
+
+  navigate(url: string) {
+    this.router.navigate([url]);
+  }
+
   @Input() menu: any[] = [];
 }

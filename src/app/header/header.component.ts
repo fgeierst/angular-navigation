@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { NavDesktopComponent } from '../nav-desktop/nav-desktop.component';
 import { NavMobileComponent } from '../nav-mobile/nav-mobile.component';
@@ -11,6 +12,12 @@ import { NavMobileComponent } from '../nav-mobile/nav-mobile.component';
   imports: [SearchComponent, NavDesktopComponent, NavMobileComponent],
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
+
+  navigate(url: string) {
+    this.router.navigate([url]);
+  }
+
   menu = [
     {
       name: 'Products',
@@ -33,7 +40,7 @@ export class HeaderComponent {
     },
     {
       name: 'Contact',
-      link: '/search',
+      link: '/contact',
     },
   ];
 }

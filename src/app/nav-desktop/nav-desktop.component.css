@@ -10,7 +10,7 @@ li {
   display: flex;
 }
 
-a {
+.link {
   display: block;
   padding: 0.5rem 0;
 }
@@ -36,12 +36,12 @@ a {
   flex-direction: row;
 }
 
-button {
+.submenu-toggle {
   display: flex;
   align-items: center;
   gap: 0.1rem;
 }
 
-button[aria-expanded="true"] ::ng-deep svg {
+.submenu-toggle[aria-expanded="true"] ::ng-deep svg {
   transform: rotate(180deg);
 }
