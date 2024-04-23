@@ -21,6 +21,13 @@ header ::ng-deep a {
   cursor: pointer;
 }
 
+.icon {
+  width: 1.375rem;
+  height: 1.375rem;
+  display: flex;
+  align-items: center;
+}
+
 .desktop-only {
   display: none;
 

@@ -3,13 +3,19 @@ import { Router } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 import { NavDesktopComponent } from '../nav-desktop/nav-desktop.component';
 import { NavMobileComponent } from '../nav-mobile/nav-mobile.component';
+import { HomeComponent } from '../icons/home/home.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  imports: [SearchComponent, NavDesktopComponent, NavMobileComponent],
+  imports: [
+    SearchComponent,
+    NavDesktopComponent,
+    NavMobileComponent,
+    HomeComponent,
+  ],
 })
 export class HeaderComponent {
   constructor(private router: Router) {}

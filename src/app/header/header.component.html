@@ -1,5 +1,8 @@
 <header>
-  <div class="logo" (click)="navigate('/')">Angular Navigation</div>
+  <div class="logo" (click)="navigate('/')">
+    <app-home class="icon" />
+    <span class="desktop-only">Angular Navigation</span>
+  </div>
 
   <div class="desktop-only">
     <app-nav-desktop [menu]="menu" />
