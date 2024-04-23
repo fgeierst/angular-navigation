@@ -1,5 +1,5 @@
 <div aria-label="Main">
-  <div (click)="open = !open">
+  <div class="panel-toggle" (click)="open = !open">
     <span class="sr-only">Main Menu</span>
     @if (open) {
     <app-cross class="icon" />
@@ -16,7 +16,9 @@
         <div class="children">
           @for (child of item.children; track child.name) {
           <div>
-            <div (click)="navigate(child.link)">{{ child.name }}</div>
+            <div class="link" (click)="navigate(child.link)">
+              {{ child.name }}
+            </div>
           </div>
           }
         </div>

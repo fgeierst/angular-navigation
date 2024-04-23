@@ -10,7 +10,7 @@
       <div class="children" [class.open]="item.open">
         @for (child of item.children; track child.name) {
         <div class="children__item">
-          <div (click)="navigate(child.link)">
+          <div class="link" (click)="navigate(child.link)">
             {{ child.name }}
           </div>
         </div>

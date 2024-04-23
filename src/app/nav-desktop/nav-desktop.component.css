@@ -10,6 +10,7 @@
 .link {
   display: block;
   padding: 0.5rem 0;
+  cursor: pointer;
 }
 
 .children {
@@ -37,6 +38,7 @@
   display: flex;
   align-items: center;
   gap: 0.1rem;
+  cursor: pointer;
 }
 
 .submenu-toggle[aria-expanded="true"] ::ng-deep svg {
