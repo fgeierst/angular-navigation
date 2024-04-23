@@ -1,13 +1,13 @@
 <div aria-label="Main">
-  <div (click)="open = !open" [attr.aria-expanded]="open">
+  <div (click)="open = !open">
     <span class="sr-only">Main Menu</span>
     @if (open) {
-    <app-cross aria-hidden="true" class="icon" />
+    <app-cross class="icon" />
     } @else {
-    <app-hamburger-menu aria-hidden="true" class="icon" />
+    <app-hamburger-menu class="icon" />
     }
   </div>
-  <div class="panel">
+  <div class="panel" [class.open]="open">
     <div class="items">
       @for (item of menu; track item.name) {
       <div>

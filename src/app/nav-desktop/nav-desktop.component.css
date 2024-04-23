@@ -16,7 +16,7 @@
   display: none;
 }
 
-[aria-expanded="true"] + .children {
+.children.open {
   display: flex;
   position: fixed;
   list-style: none;

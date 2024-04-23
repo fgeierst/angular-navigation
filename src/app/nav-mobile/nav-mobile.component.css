@@ -10,7 +10,7 @@
   padding: 1rem;
 }
 
-[aria-expanded="true"] + .panel {
+.panel.open {
   opacity: 1;
 }
 
