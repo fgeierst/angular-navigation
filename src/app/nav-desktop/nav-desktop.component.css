@@ -14,10 +14,7 @@
 }
 
 .children {
-  display: none;
-}
-
-.children.open {
+  opacity: 0;
   display: flex;
   position: fixed;
   list-style: none;
@@ -34,6 +31,10 @@
   flex-direction: row;
 }
 
+.children.open {
+  opacity: 1;
+}
+
 .submenu-toggle {
   display: flex;
   align-items: center;
@@ -41,7 +42,7 @@
   cursor: pointer;
 }
 
-.submenu-toggle[aria-expanded="true"] ::ng-deep svg {
+.submenu-toggle.open ::ng-deep svg {
   transform: rotate(180deg);
 }
 

@@ -3,7 +3,11 @@
     @for (item of menu; track item.name) {
     <div class="items__item">
       @if (item.children) {
-      <div class="submenu-toggle" (click)="item.open = !item.open">
+      <div
+        class="submenu-toggle"
+        [class.open]="item.open"
+        (click)="item.open = !item.open"
+      >
         {{ item.name }}
         <app-chevron-down class="icon" />
       </div>
